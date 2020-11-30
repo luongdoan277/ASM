@@ -44,9 +44,8 @@ namespace ASM.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<decimal>(type: "decimal(8,2)", nullable: false),
                     CategoryID = table.Column<int>(type: "int", nullable: false),
-                    SizeID = table.Column<int>(type: "int", nullable: false),
                     CategoriesCategoryID = table.Column<long>(type: "bigint", nullable: true),
-                    SizesSizeID = table.Column<long>(type: "bigint", nullable: true)
+                    SizeID = table.Column<long>(type: "bigint", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -58,8 +57,8 @@ namespace ASM.Migrations
                         principalColumn: "CategoryID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Products_Sizes_SizesSizeID",
-                        column: x => x.SizesSizeID,
+                        name: "FK_Products_Sizes_SizeID",
+                        column: x => x.SizeID,
                         principalTable: "Sizes",
                         principalColumn: "SizeID",
                         onDelete: ReferentialAction.Restrict);
@@ -71,9 +70,9 @@ namespace ASM.Migrations
                 column: "CategoriesCategoryID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_SizesSizeID",
+                name: "IX_Products_SizeID",
                 table: "Products",
-                column: "SizesSizeID");
+                column: "SizeID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

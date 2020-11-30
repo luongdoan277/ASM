@@ -62,17 +62,14 @@ namespace ASM.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(8,2)");
 
-                    b.Property<int>("SizeID")
-                        .HasColumnType("int");
-
-                    b.Property<long?>("SizesSizeID")
+                    b.Property<long?>("SizeID")
                         .HasColumnType("bigint");
 
                     b.HasKey("ProductID");
 
                     b.HasIndex("CategoriesCategoryID");
 
-                    b.HasIndex("SizesSizeID");
+                    b.HasIndex("SizeID");
 
                     b.ToTable("Products");
                 });
@@ -98,13 +95,11 @@ namespace ASM.Migrations
                         .WithMany("Products")
                         .HasForeignKey("CategoriesCategoryID");
 
-                    b.HasOne("ASM.Models.Size", "Sizes")
+                    b.HasOne("ASM.Models.Size", null)
                         .WithMany("Products")
-                        .HasForeignKey("SizesSizeID");
+                        .HasForeignKey("SizeID");
 
                     b.Navigation("Categories");
-
-                    b.Navigation("Sizes");
                 });
 
             modelBuilder.Entity("ASM.Models.Category", b =>

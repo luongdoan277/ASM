@@ -21,10 +21,7 @@ namespace ASM.Models
 
         public int CategoryID { get; set; }
 
-        public int SizeID { get; set; }
-
         public virtual Category Categories { get; set; }
-        public virtual Size Sizes { get; set; }
 
     }
 }
