@@ -71,7 +71,7 @@ namespace ASM.Models
                         Description = "Pizza với xốt cà chua và phomát.",
                         Price = 150,
                         CategoryID = 1,
-                        SizeID = 1,
+                       
 
                     },
                     new Product
@@ -81,7 +81,7 @@ namespace ASM.Models
                         Description = "Jămbông, dứa, xốt cà chua và phomát",
                         Price = 150,
                         CategoryID = 1,
-                        SizeID = 1,
+                       
                     }, new Product
                     {
                         Name = "TROPICANA SEAFOOD",
@@ -89,7 +89,7 @@ namespace ASM.Models
                         Description = "Tôm, cá, cua thanh, ngao, dứa, xốt ớt chua ngọt và phomát.",
                         Price = 150,
                         CategoryID = 1,
-                        SizeID = 1,
+                       
                     }, new Product
                     {
                         Name = "BBQ BEEFY",
@@ -97,7 +97,7 @@ namespace ASM.Models
                         Description = "Thịt ba chỉ bò và heo nướng, hành tây, cà chua với xốt BBQ, khoai tây sợi và...",
                         Price = 150,
                         CategoryID = 1,
-                        SizeID = 1,
+                       
                     }, new Product
                     {
                         Name = " BBQ BEEFY",
@@ -105,7 +105,7 @@ namespace ASM.Models
                         Description = "Thịt gà Mêhicô, xốt BBQ, ớt xanh, nấm, jămbông, thịt ba chỉ và phomát.",
                         Price = 150,
                         CategoryID = 1,
-                        SizeID = 1,
+                        
                     }, new Product
                     {
                         Name = "CHEESY TUNA",
@@ -113,7 +113,7 @@ namespace ASM.Models
                         Description = "Bò xay nướng xốt BBQ, hành tây xào, cà chua tươi, phomát Cheddar và phomát.",
                         Price = 150,
                         CategoryID = 1,
-                        SizeID = 1,
+                        
                     },
 
 
@@ -125,7 +125,7 @@ namespace ASM.Models
                         Description = "Salát Ceasar với xà lách thái nhỏ, bánh mỳ nướng, thịt ba chỉ xông khói, trứng chần, trộn....",
                         Price = 150,
                         CategoryID = 2,
-                        SizeID = 2,
+                        
 
                     },
                     new Product
@@ -135,7 +135,7 @@ namespace ASM.Models
                         Description = "Salát với xà lách, cà chua, dưa chuột, hành tây, trộn xốt dầu dấm đặc biệt của Al...",
                         Price = 150,
                         CategoryID = 2,
-                        SizeID = 1,
+                       
                     }, new Product
                     {
                         Name = "BEEF SALAD",
@@ -143,7 +143,7 @@ namespace ASM.Models
                         Description = "Salát với thịt bò nhập khẩu tẩm xốt ớt cay nướng, khoai tây bi, ớt Đà Lạt ...",
                         Price = 150,
                         CategoryID = 2,
-                        SizeID = 1,
+                        
                     }, new Product
                     {
                         Name = "BBQ BEEFY",
@@ -151,7 +151,7 @@ namespace ASM.Models
                         Description = "Salát Nga với cà rốt, khoai tây, đậu hạt, ngô hạt, jămbông, củ cải đỏ, cần tây, trộn...",
                         Price = 150,
                         CategoryID = 2,
-                        SizeID = 1,
+                        
                     }, new Product
                     {
                         Name = "GREEN GARDEN SALAD",
@@ -159,7 +159,7 @@ namespace ASM.Models
                         Description = "Salát Nga với cà rốt, khoai tây, đậu hạt, ngô hạt, jămbông, củ cải đỏ, cần tây, trộn...",
                         Price = 150,
                         CategoryID = 2,
-                        SizeID = 3,
+                        
                     }, new Product
                     {
                         Name = "GREEN GARDEN SALAD",
@@ -167,7 +167,7 @@ namespace ASM.Models
                         Description = "Salát Nga với cà rốt, khoai tây, đậu hạt, ngô hạt, jămbông, củ cải đỏ, cần tây, trộn...",
                         Price = 150,
                         CategoryID = 2,
-                        SizeID = 1,
+                        
                     }
 
                     //Pasta
@@ -178,7 +178,7 @@ namespace ASM.Models
                         Description = "Mỳ Ý sợi dài với xốt thịt bò hầm & cà chua.",
                         Price = 150,
                         CategoryID = 3,
-                        SizeID = 1,
+                       
                     }, new Product
                     {
                         Name = "vSPAGHETTI BOLOGNAISE",
@@ -186,7 +186,7 @@ namespace ASM.Models
                         Description = "Mỳ Ý sợi dẹt với jămbông & phomát xốt kem.",
                         Price = 150,
                         CategoryID = 3,
-                        SizeID = 3,
+                        
                     }, new Product
                     {
                         Name = "GSTEAK & MUSHROOM SPAGHETTI",
@@ -194,7 +194,7 @@ namespace ASM.Models
                         Description = "Mỳ Ý sợi dài với thịt bò Úc, nấm & xốt kem đậu đen.",
                         Price = 150,
                         CategoryID = 3,
-                        SizeID = 2,
+                        
                     }
                 );
                 context.SaveChanges();
