@@ -64,14 +64,14 @@ namespace ASM
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("catpage",
-                    "{category}/Page{productPage:int}",
+                    "{category}/productPage{productPage:int}",
                     new { Controller = "Home", action = "Index" });
 
                 endpoints.MapControllerRoute("page",
-                    "Page{productPage:int}",
+                    "productPage{productPage:int}",
                     new { Controller = "Home", action = "Index", productPage = 1 });
                 endpoints.MapControllerRoute("pagination",
-                    "Drinks/page{productPage:int}",
+                    "Products/productPage{productPage:int}",
                     new { Controller = "Home", action = "Index", productPage = 1 });
 
                 endpoints.MapDefaultControllerRoute();

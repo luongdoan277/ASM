@@ -13,7 +13,7 @@ namespace ASM.Controllers
     public class HomeController : Controller
     {
         private IStoreReponsitory reponsitory;
-        public int PageSize = 4;
+        public int PageSize = 6;
 
         public HomeController(IStoreReponsitory repo)
         {
