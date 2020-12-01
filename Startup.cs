@@ -20,7 +20,7 @@ namespace ASM
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -34,6 +34,9 @@ namespace ASM
                }
                );
             services.AddScoped<IStoreReponsitory, EFStoreRepository>();
+            services.AddRazorPages();
+            services.AddDistributedMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,13 +57,25 @@ namespace ASM
 
             app.UseRouting();
 
+            app.UseSession();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute("catpage",
+                    "{category}/Page{productPage:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("page",
+                    "Page{productPage:int}",
+                    new { Controller = "Home", action = "Index", productPage = 1 });
+                endpoints.MapControllerRoute("pagination",
+                    "Drinks/page{productPage:int}",
+                    new { Controller = "Home", action = "Index", productPage = 1 });
+
+                endpoints.MapDefaultControllerRoute();
+                endpoints.MapRazorPages();
             });
 
             SeedData.EnsurePopulated(app);
