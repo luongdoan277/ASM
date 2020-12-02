@@ -1,26 +1,28 @@
 ﻿@model Product
 
-<div class="col-md-4">
-    <div class="img-product-home">
-        <img src="@Model.ImageProduct" alt="Alternate Text" />
-    </div>
-    <div class="text-center">
-        <a href="#">@Model.Name</a>
-    </div>
-    <p class="text-center">
-        <span>
-            S @Model.Price
-            <br />
-            L @(Model.Price+80)
-            <br />
-            XL @(Model.Price*2)
-        </span>
-    </p>
-    <p>@Model.Description</p>
-    <div>
-        <button type="submit" class="btn btn-success btn-sm pull-right">
-            Chọn mua
-        </button>
+<div class="col-lg-4" style="padding: 5px 10px 40px;">
+    <div style="position: relative; height: 100%; background-color: #fff; box-shadow: 0 3px 3px rgba(0,0,0,.25); border-radius: 6px; padding: 20px; text-align: center;">
+        <div class="img-product-home">
+            <img style="width: 100%; max-width: 235px; max-height: 175px; -o-object-fit: contain; object-fit: contain; -o-object-position: center; object-position: center;" src="@Model.ImageProduct" alt="Alternate Text" />
+        </div>
+        <div style="font-size: 20px; padding-top: 5px; padding-bottom: 5px; font-family: SourceSansPro-Bold; }">
+            <a href="#">@Model.Name</a>
+        </div>
+        <p style="font-family: SourceSansPro-Bold; font-style: normal; font-size: 14px; color: #f15a22; margin-bottom: 10px;">
+            <span>
+                S @Model.Price
+                <br />
+                L @(Model.Price+80)
+                <br />
+                XL @(Model.Price*2)
+            </span>
+        </p>
+        <p style="font-size: 15px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; padding: 0; margin-bottom: 25px;">@Model.Description</p>
+        <div>
+            <button type="submit" class="btn btn-sm pull-right button-product" style="text-transform: uppercase; max-width: 180px; border-radius: 30px; position: absolute; bottom: -20px; left: 50%; -webkit-transform: translate(-50%,0); transform: translate(-50%,0);">
+                Chọn mua
+            </button>
+        </div>
     </div>
 </div>
 

@@ -1,16 +1,64 @@
 ﻿@model ProductsListViewModel
 
-<div class="row">
-    @foreach (var p in Model.Products)
-    {
-        <partial name="ProductSummary" model="p" />
-    }
-</div>
-
-<div page-model="@Model.PagingInfo" page-action="Index"
-     page-classes-enabled="true"
-     page-class="btn" page-class-normal="btn-outline-dark"
-     page-class-selected="btn-primary"
-     page-url-category="@Model.CurrentCategory"
-     class="btn-group pull-right m-1">
+<div class="col-lg-12 row">
+    <div class="col-lg-8 row">
+        @foreach (var p in Model.Products)
+        {
+            <partial name="ProductSummary" model="p" />
+        }
+        <div page-model="@Model.PagingInfo" page-action="Index"
+             page-classes-enabled="true"
+             page-class="btn" page-class-normal="btn-outline-dark"
+             page-class-selected="btn-primary"
+             page-url-category="@Model.CurrentCategory"
+             class="btn-group pull-right m-1">
+        </div>
+    </div>
+    <div class="col-md-5 col-lg-4 mini-cart ng-star-inserted">
+        <div class="minicart-wrapper" id="minicartWrapper" style="position: relative; top: 0px; width: auto;">
+            <div class="minicart-content">
+                <div class="modal-header minicart-header">
+                    <h4 class="minicart-title" id="modal-basic-title">
+                        Giỏ hàng
+                        <label class="item-count pl-2 pr-2" for="count">
+                            <span>(0 Sản phẩm)</span>
+                        </label>
+                    </h4>
+                </div>
+                <div class="modal-body minicart-body">
+                    <div class="shopping-cart-empty ng-star-inserted">
+                        <div class="cart-empty img-empty">
+                            <img alt="" class="cart-empty" src="assets/img/icons/i-cart-enpty.svg">
+                        </div>
+                        <span> Giỏ hàng của bạn đang rỗng, vui lòng đặt món. </span>
+                    </div>
+                </div><div class="modal-footer minicart-footer">
+                    <div class="discount">
+                        <div class="row price-row sub-total mincart-ne">
+                            <div class="label col-6">Thành tiền</div>
+                            <div class="price col-6"> </div>
+                        </div>
+                        <div class="row price-row tax">
+                            <div class="label col-6">Thuế</div>
+                            <div class="price col-6"></div>
+                        </div>
+                    </div><div class="final-price">
+                        <div class="row price-row total-price">
+                            <div class="label col-6">Tổng cộng </div>
+                            <div class="price col-6"></div>
+                        </div><div class="row ng-star-inserted">
+                            <div class="col-6 group-btn">
+                                <a class="btn btn-outline ng-star-inserted">Xem giỏ hàng</a>
+                            </div>
+                            <div class="col-6 group-btn">
+                                <button class="btn-outline-default ng-star-inserted">
+                                    Thanh toán
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
